@@ -1,0 +1,14 @@
+header: JUGPH
+subheader: Empowering Java developers across the Philippines through community, education, and innovation. We create and support IT solutions for online events with scalability and security.
+
+footer:
+  - title: Community
+    option1: About Us
+    option2: Code of Conduct
+    option3: Speaker Program
+    option4: Sponsors
+  - title: Resources
+    option1: Past Events
+    option2: Learning Resources
+    option3: Job Board
+    option4: Newsletter

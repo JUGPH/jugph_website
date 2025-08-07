@@ -1,0 +1,25 @@
+title:
+  - character: "J"
+    color: "#ab205f"
+  - character: "U"
+    color: "#e8762e"
+  - character: "G"
+    color: "#f05459"
+
+description: "We organize IT events for experienced Java professionals.
+  Technical, specialized, enterprise-focused. We carefully select
+  speakers who will help you navigate the industry: trends, tools,
+  approaches, and global updates in Java technologies and enterprise
+  development."
+
+country: "Philippines"
+
+headline:
+  part1: Where Java Developers
+  part2: Connect & Create
+
+buttons:
+  - text: Join Our Community
+    link: "https://www.meetup.com/java-user-group-ph/"
+  - text: View Projects
+    link: "https://github.com/JUGPH"

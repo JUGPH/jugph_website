@@ -1,0 +1,16 @@
+header: Upcoming Events
+subheader: Don't miss out on our exciting events, workshops, and conferences designed to elevate your Java skills.
+
+features:
+  - title: Monthly Meetup
+    date: Aug 2025
+    header: Spring Boot 3.x Deep Dive
+    subheader: Explore the latest features in Spring Boot 3.x, including native compilation, observability improvements, and performance optimizations.
+    place: Makati, Philippines
+    button: Learn More
+  - title: Workshop
+    date: Sep 2025
+    header: Microservices with Java
+    subheader: Hands-on workshop covering microservices architecture, containerization with Docker, and deployment strategies using Kubernetes.
+    place: Online + BGC, Taguig
+    button: Register Now

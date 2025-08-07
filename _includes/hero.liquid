@@ -8,26 +8,19 @@
             <div
               class="text-9xl md:text-[12rem] font-black tracking-tighter font-display leading-none"
             >
+              {% for title in site.data.hero.title %}
               <span
                 class="inline-block text-glow animate-pulse-slow"
-                style="color: #ab205f"
-                >J</span
+                style="color: {{ title.color }}"
+                >{{ title.character }}</span
               >
-              <span
-                class="inline-block text-glow animate-pulse-slow animation-delay-200"
-                style="color: #e8762e"
-                >U</span
-              >
-              <span
-                class="inline-block text-glow animate-pulse-slow animation-delay-400"
-                style="color: #f05459"
-                >G</span
-              >
+                {% endfor %}
             </div>
             <div
               class="text-3xl md:text-4xl text-gray-300 mt-6 tracking-[0.5em] font-display font-light animate-fade-in-up"
             >
-              PHILIPPINES
+              {{ site.data.hero.country }}
+
             </div>
           </div>
 
@@ -35,46 +28,33 @@
             <h1
               class="text-5xl md:text-7xl font-bold leading-tight font-display"
             >
-              Where Java Developers<br />
-              <span class="gradient-text typing-demo">Connect & Create</span>
+              {{  site.data.hero.headline.part1}} <br />
+              <span class="gradient-text typing-demo"> {{  site.data.hero.headline.part2}} </span>
             </h1>
 
             <p
               class="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed font-light"
             >
-              We organize IT events for experienced Java professionals.
-              Technical, specialized, enterprise-focused. We carefully select
-              speakers who will help you navigate the industry: trends, tools,
-              approaches, and global updates in Java technologies and enterprise
-              development.
+              {{ site.data.hero.description }}
             </p>
           </div>
 
           <div
             class="flex flex-col md:flex-row gap-6 justify-center pt-8 animate-slide-up animation-delay-1000"
           >
+           {% for button in site.data.hero.buttons  %} 
             <div class="gradient-border hover-lift">
               <div class="gradient-border-inner">
                 <a
-                  href="https://www.meetup.com/java-user-group-ph/"
+                  href= {{ button.link }}
                   target="_blank"
                   class="px-12 py-5 rounded-lg text-xl font-bold text-white block font-display"
                 >
-                  <i class="fas fa-users mr-3"></i>Join Our Community
+                  <i class="fas fa-users mr-3"></i> {{ button.text }}
                 </a>
               </div>
             </div>
-            <div class="gradient-border hover-lift">
-              <div class="gradient-border-inner">
-                <a
-                  href="https://github.com/JUGPH"
-                  target="_blank"
-                  class="px-12 py-5 rounded-lg text-xl font-bold text-white block font-display"
-                >
-                  <i class="fab fa-github mr-3"></i>View Projects
-                </a>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>

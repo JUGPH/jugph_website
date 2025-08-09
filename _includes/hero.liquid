@@ -1,74 +1,76 @@
 <section
-      class="relative z-10 min-h-screen flex items-center justify-center pt-20"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center space-y-8">
-          <!-- Animated Logo -->
-          <div class="mb-16 animate-scale-in">
-            <div
-              class="text-9xl md:text-[12rem] font-black tracking-tighter font-display leading-none"
-            >
-              {% for title in site.data.hero.title %}
-              <span
-                class="inline-block text-glow animate-pulse-slow"
-                style="color: {{ title.color }}"
-                >{{ title.character }}</span
-              >
-                {% endfor %}
-            </div>
-            <div
-              class="text-3xl md:text-4xl text-gray-300 mt-6 tracking-[0.5em] font-display font-light animate-fade-in-up"
-            >
-              {{ site.data.hero.country }}
-
-            </div>
-          </div>
-
-          <div class="space-y-8 animate-fade-in-up animation-delay-600">
-            <h1
-              class="text-5xl md:text-7xl font-bold leading-tight font-display"
-            >
-              {{  site.data.hero.headline.part1}} <br />
-              <span class="gradient-text typing-demo"> {{  site.data.hero.headline.part2}} </span>
-            </h1>
-
-            <p
-              class="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed font-light"
-            >
-              {{ site.data.hero.description }}
-            </p>
-          </div>
-
-          <div
-            class="flex flex-col md:flex-row gap-6 justify-center pt-8 animate-slide-up animation-delay-1000"
-          >
-           {% for button in site.data.hero.buttons  %} 
-            <div class="gradient-border hover-lift">
-              <div class="gradient-border-inner">
-                <a
-                  href= {{ button.link }}
-                  target="_blank"
-                  class="px-12 py-5 rounded-lg text-xl font-bold text-white block font-display"
-                >
-                  <i class="fas fa-users mr-3"></i> {{ button.text }}
-                </a>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-
-      <!-- Scroll Indicator -->
-      <div
-        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
-      >
+  class="relative z-10 min-h-screen flex items-center justify-center pt-16 sm:pt-20"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center space-y-6 sm:space-y-8">
+      <!-- Animated Logo -->
+      <div class="mb-12 sm:mb-16 animate-scale-in">
         <div
-          class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"
+          class="text-6xl xs:text-7xl sm:text-9xl md:text-[12rem] font-black tracking-tighter font-display leading-none break-words"
         >
-          <div
-            class="w-1 h-3 bg-gradient-primary rounded-full mt-2 animate-pulse"
-          ></div>
+          {% for title in site.data.hero.title %}
+          <span
+            class="inline-block text-glow animate-pulse-slow"
+            style="color: {{ title.color }}"
+          >
+            {{ title.character }}
+          </span>
+          {% endfor %}
+        </div>
+        <div
+          class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-300 mt-4 sm:mt-6 tracking-[0.3em] sm:tracking-[0.5em] font-display font-light animate-fade-in-up"
+        >
+          {{ site.data.hero.country }}
         </div>
       </div>
-    </section>
+
+      <div class="space-y-4 sm:space-y-8 animate-fade-in-up animation-delay-600">
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight font-display"
+        >
+          {{ site.data.hero.headline.part1 }} <br />
+          <span class="gradient-text typing-demo">
+            {{ site.data.hero.headline.part2 }}
+          </span>
+        </h1>
+
+        <p
+          class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl sm:max-w-5xl mx-auto leading-relaxed font-light"
+        >
+          {{ site.data.hero.description }}
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-6 sm:pt-8 animate-slide-up animation-delay-1000"
+      >
+        {% for button in site.data.hero.buttons %}
+        <div class="gradient-border hover-lift">
+          <div class="gradient-border-inner">
+            <a
+              href="{{ button.link }}"
+              target="_blank"
+              class="px-6 py-3 sm:px-12 sm:py-5 rounded-lg text-base sm:text-xl font-bold text-white block font-display"
+            >
+              <i class="fas fa-users mr-2 sm:mr-3"></i> {{ button.text }}
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div
+    class="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+  >
+    <div
+      class="w-5 sm:w-6 h-8 sm:h-10 border-2 border-gray-400 rounded-full flex justify-center"
+    >
+      <div
+        class="w-1 h-2 sm:h-3 bg-gradient-primary rounded-full mt-1 sm:mt-2 animate-pulse"
+      ></div>
+    </div>
+  </div>
+</section>
